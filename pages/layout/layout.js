@@ -1,9 +1,8 @@
-import { Fragment } from "react";
 import MainHeader from './main_header';
 
 function Layout(props){
     return(
-        <div className="bg-black">
+        <div>
             <MainHeader/>
             <main>
                 {props.children}
