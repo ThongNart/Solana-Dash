@@ -2,8 +2,9 @@ import Link from 'next/link'
 import styles from './main_header.module.css'
 
 function MainHeader() {
+
     return(
-        <div className="flex space-x-12 bg-zinc-900 shadow-2xl p-5">
+        <div className="flex space-x-12 bg-zinc-900 shadow-lg p-5">
             <div>
                 <Link href="/"><img className={styles.logo} src="solana-dash-logo.png" alt="page-logo"/></Link>
             </div>
@@ -18,9 +19,9 @@ function MainHeader() {
                 <input className="p-3 bg-zinc-800 rounded-md w-auto" type="text" placeholder='enter your wallet address...'></input>
                 <button className="p-3 bg-zinc-800 rounded-md" >Check Wallet</button>
             </div>
-            
         </div>
     )
 }
+
 
 export default MainHeader;
