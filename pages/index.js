@@ -19,7 +19,7 @@ function Home(props) {
 
   const fetcher = (...args) => fetch(...args).then((res)=> res.json());
   const {data, error} = useSWR(endpoint, fetcher );
-  console.log(data)
+  console.log("data from useSWR: ", data)
 
   useEffect( ()=> {
       if (data === []) {
@@ -33,7 +33,6 @@ function Home(props) {
 
   return (
     <div className="text-lg">
-      
 
       <div className="flex space-x-6 bg-zinc-900 p-7 m-5 rounded-2xl">
       <h3 className="text-zinc-400 mt-1.5">Solana Ecosystem Coins</h3>
@@ -74,7 +73,7 @@ export async function getStaticProps(){
         gmtPrice: gmtPrice.rate,
         rayPrice: rayPrice.rate
       }, 
-      revalidate: 100000
+      revalidate: 6000
   }
 
   } catch(err) {
